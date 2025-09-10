@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IS Design for Dasah Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .presentation-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px 0;
+        }
+        .slide {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slide h1, .slide h2, .slide h3 {
+            color: #005A9C;
+        }
+        .slide h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .slide h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #005A9C;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .slide p, .slide li {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .slide ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .slide strong {
+            color: #D9534F;
+        }
+        .center-text {
+            text-align: center;
+        }
+        .image-placeholder {
+            font-size: 3em;
+            text-align: center;
+            margin: 20px 0;
+            color: #ccc;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .flex-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        .flex-item .icon {
+            font-size: 4em;
+            color: #005A9C;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #005A9C;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .moscow-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .moscow-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .moscow-item h3 {
+            margin-top: 0;
+            color: white;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        .moscow-item.must h3 { background-color: #d9534f; }
+        .moscow-item.should h3 { background-color: #f0ad4e; }
+        .moscow-item.could h3 { background-color: #5bc0de; }
+        .moscow-item.wont h3 { background-color: #777; }
+
+        @media (max-width: 600px) {
+            .slide {
+                padding: 20px;
+                min-height: 300px;
+            }
+            .slide h1 { font-size: 2em; }
+            .slide h2 { font-size: 1.5em; }
+            .moscow-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+
+        <!-- Slide 1: Title Slide -->
+        <div class="slide">
+            <div class="image-placeholder">🍽️</div>
+            <h1>Designing an Information System for Dasah Restaurant</h1>
+            <p class="center-text">A Beginner's Guide to System Planning</p>
+        </div>
+
+        <!-- Slide 2: Agenda -->
+        <div class="slide">
+            <h2>Today's Agenda</h2>
+            <ul>
+                <li>Meet Dasah Restaurant & Its Stakeholders</li>
+                <li>Gathering Needs: How we listen and learn</li>
+                <li>Documenting the Requirements: Creating the blueprint</li>
+                <li>Validating the Requirements: Checking our work</li>
+                <li>Prioritizing: What's most important?</li>
+                <li>Traceability: Connecting the dots from start to finish</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: About Dasah Restaurant -->
+        <div class="slide">
+            <h2>1. Meet Dasah Restaurant</h2>
+            <div class="image-placeholder">🏛️</div>
+            <p>Dasah is a new, mid-sized casual dining restaurant.</p>
+            <ul>
+                <li><strong>Cuisine:</strong> A fusion of Mediterranean and Middle Eastern food.</li>
+                <li><strong>Current Services:</strong> Dine-in and Takeaway.</li>
+                <li><strong>Future Goal:</strong> To introduce online ordering and delivery to grow the business.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 4: The Stakeholders -->
+        <div class="slide">
+            <h2>Who are the Stakeholders?</h2>
+            <p>These are the key people who have an interest in or are affected by the new system.</p>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="icon">💰</div>
+                    <h3>The Owner</h3>
+                    <p>Concerned with profit, costs, and growth.</p>
+                </div>
+                <div class="flex-item">
+                    <div class="icon">📋</div>
+                    <h3>The Manager</h3>
+                    <p>Focused on smooth daily operations.</p>
+                </div>
+                <div class="flex-item">
+                    <div class="icon">👨‍🍳</div>
+                    <h3>The Head Chef</h3>
+                    <p>Manages the kitchen and food inventory.</p>
+                </div>
+                 <div class="flex-item">
+                    <div class="icon">🙋‍♂️</div>
+                    <h3>Waitstaff</h3>
+                    <p>Interact directly with customers.</p>
+                </div>
+                 <div class="flex-item">
+                    <div class="icon">😊</div>
+                    <h3>Customers</h3>
+                    <p>Expect a great and easy experience.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Gathering Requirements -->
+        <div class="slide">
+            <h2>2. Gathering Requirements</h2>
+            <p>To build the right system, we first need to understand everyone's needs. We used two simple methods:</p>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="icon">🗣️</div>
+                    <h3>Interviews</h3>
+                    <p>We talked directly to the stakeholders to ask them what they need and what problems they face.</p>
+                </div>
+                <div class="flex-item">
+                    <div class="icon">🧐</div>
+                    <h3>Observation</h3>
+                    <p>We watched the staff and customers to see how the restaurant currently operates and identify hidden challenges.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: What We Learned -->
+        <div class="slide">
+            <h2>What We Learned from Stakeholders</h2>
+            <ul>
+                <li><strong>The Owner said:</strong> "I need to see real-time sales reports and I want to offer online ordering to get more customers."</li>
+                <li><strong>The Manager said:</strong> "Managing table reservations and staff schedules is a manual, chaotic process. I need a system to automate this."</li>
+                <li><strong>A Waiter said:</strong> "Handwritten orders sometimes lead to mistakes. Splitting bills for large groups is also very difficult and slow."</li>
+                <li><strong>We Observed:</strong> The Chef struggles with paper-based inventory, and customers sometimes wait a long time to be seated or to pay.</li>
+            </ul>
+        </div>
+        
+        <!-- Slide 7: Documenting Requirements -->
+        <div class="slide">
+            <h2>3. Documenting Requirements: The Blueprint</h2>
+            <p>After gathering information, we write it down in a structured way. This document acts as the blueprint for our new system.</p>
+            <ul>
+                <li><strong>Functional Requirements:</strong> What the system <strong>must do</strong>.
+                    <ul><li><em>Example: Process customer payments.</em></li></ul>
+                </li>
+                <li><strong>Non-Functional Requirements:</strong> How the system <strong>must be</strong>.
+                    <ul><li><em>Example: The system must be easy to use.</em></li></ul>
+                </li>
+                <li><strong>User Requirements:</strong> A user's goal, written from their perspective.
+                    <ul><li><em>Example: "As a customer, I want to order food online."</em></li></ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Slide 8: Example Requirements -->
+        <div class="slide">
+            <h2>Examples of Dasah's Requirements</h2>
+            <h3>Functional (The "What")</h3>
+            <ul>
+                <li><strong>Point of Sale (POS):</strong> To take orders and payments.</li>
+                <li><strong>Order Management:</strong> To send orders to the kitchen.</li>
+                <li><strong>Reservation Management:</strong> To handle table bookings.</li>
+                <li><strong>Inventory Management:</strong> To track food stock.</li>
+                <li><strong>Online Ordering:</strong> To allow customers to order via a website.</li>
+            </ul>
+            <h3>Non-Functional (The "How")</h3>
+            <ul>
+                <li><strong>User-Friendly:</strong> Must be easy for staff to learn.</li>
+                <li><strong>Reliable:</strong> Must not crash during busy hours.</li>
+                <li><strong>Secure:</strong> Must protect customer payment data.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 9: Requirement Validation -->
+        <div class="slide">
+            <h2>4. Requirement Validation: Are We on the Right Track?</h2>
+            <p>This step is about double-checking that our blueprint is correct before we start building.</p>
+             <div class="flex-container">
+                <div class="flex-item">
+                    <div class="icon">🤝</div>
+                    <h3>Walkthroughs</h3>
+                    <p>We review the requirement documents with the stakeholders (owner, manager, etc.) to get their confirmation and feedback.</p>
+                </div>
+                <div class="flex-item">
+                    <div class="icon">📱</div>
+                    <h3>Prototyping</h3>
+                    <p>We create a simple mock-up or drawing of the system. This helps users "see" how it will work and give better feedback.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Prioritizing Requirements -->
+        <div class="slide">
+            <h2>5. Prioritizing: What's Most Important?</h2>
+            <p>We can't build everything at once. We use the <strong>MoSCoW</strong> method to decide what to build first.</p>
+            <div class="moscow-grid">
+                <div class="moscow-item must">
+                    <h3>M - Must Have</h3>
+                    <p>Critical for the system to work at all. The project will fail without these.</p>
+                </div>
+                <div class="moscow-item should">
+                    <h3>S - Should Have</h3>
+                    <p>Important and add a lot of value, but not absolutely critical for launch.</p>
+                </div>
+                <div class="moscow-item could">
+                    <h3>C - Could Have</h3>
+                    <p>Desirable "nice-to-have" features if time and resources permit.</p>
+                </div>
+                <div class="moscow-item wont">
+                    <h3>W - Won't Have</h3>
+                    <p>Features that are out of scope for now but might be considered in the future.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 11: Dasah's Priorities -->
+        <div class="slide">
+            <h2>Dasah's Priorities using MoSCoW</h2>
+            <div class="moscow-grid">
+                <div class="moscow-item must">
+                    <h3>Must Have</h3>
+                    <ul>
+                        <li>Point of Sale (POS) System</li>
+                        <li>Order Management</li>
+                        <li>System Security</li>
+                    </ul>
+                </div>
+                <div class="moscow-item should">
+                    <h3>Should Have</h3>
+                    <ul>
+                        <li>Reservation Management</li>
+                        <li>Inventory Management</li>
+                        <li>Sales Reporting</li>
+                        <li>Online Ordering</li>
+                    </ul>
+                </div>
+                <div class="moscow-item could">
+                    <h3>Could Have</h3>
+                    <ul>
+                        <li>Menu Management</li>
+                        <li>Staff Scheduling</li>
+                    </ul>
+                </div>
+                <div class="moscow-item wont">
+                    <h3>Won't Have (This Time)</h3>
+                    <ul>
+                        <li>Advanced Customer Loyalty Program</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Requirement Traceability -->
+        <div class="slide">
+            <h2>6. Requirement Traceability: Connecting the Dots</h2>
+            <p>This is a way to track each requirement from its origin (who asked for it) to its completion. It ensures no requirement gets lost.</p>
+            <p>We use a <strong>Traceability Matrix</strong> for this.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requirement ID</th>
+                        <th>Description</th>
+                        <th>Stakeholder Source</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FR1</td>
+                        <td>Point of Sale System</td>
+                        <td>Owner, Manager, Waitstaff</td>
+                        <td><strong>Must Have</strong></td>
+                    </tr>
+                    <tr>
+                        <td>FR3</td>
+                        <td>Reservation Management</td>
+                        <td>Manager, Customers</td>
+                        <td><strong>Should Have</strong></td>
+                    </tr>
+                    <tr>
+                        <td>FR7</td>
+                        <td>Online Ordering</td>
+                        <td>Owner, Customers</td>
+                        <td><strong>Should Have</strong></td>
+                    </tr>
+                     <tr>
+                        <td>UR4</td>
+                        <td>View daily sales report on phone</td>
+                        <td>Owner</td>
+                        <td><strong>Should Have</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 13: Summary & Next Steps -->
+        <div class="slide">
+            <h2>Summary & Next Steps</h2>
+            <p>We have successfully planned the new Information System for Dasah Restaurant by following these key steps:</p>
+            <ol>
+                <li>Identified the stakeholders and their needs through interviews and observation.</li>
+                <li>Documented the requirements in a clear and structured way.</li>
+                <li>Validated the requirements with stakeholders to ensure accuracy.</li>
+                <li>Prioritized what needs to be built first using the MoSCoW method.</li>
+                <li>Established a plan for tracing requirements.</li>
+            </ol>
+            <h3>Next Step:</h3>
+            <p>Begin designing and developing the system, starting with the <strong>"Must Have"</strong> and <strong>"Should Have"</strong> features.</p>
+        </div>
+
+        <!-- Slide 14: Q&A -->
+        <div class="slide">
+            <h1 style="font-size: 3em;">Thank You</h1>
+            <div class="image-placeholder">❓</div>
+            <h2 class="center-text">Questions?</h2>
+        </div>
+
+    </div>
+
+</body>
+</html>
